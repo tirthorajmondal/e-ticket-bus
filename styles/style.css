@@ -1,0 +1,27 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+.font-raleway{
+    font-family: "Raleway", sans-serif;
+}
+
+.font-inter{
+    font-family: "Inter", sans-serif;
+
+}
+
+.color-coupon-red{
+    color: #F78C9C;
+}
+
+.color-coupon-yellow{
+    color: #FFBF0F;
+}
+
+.color-theme-green{
+    color: #1DD100;
+}
+
+.color-gray-bg{
+    color: #F7F8F8;
+}
