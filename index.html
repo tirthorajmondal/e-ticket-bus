@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -75,9 +75,9 @@
         </div>
     </header>
     <hr class="border-dashed border-8 ">
-    <main class="mx-3 lg:mx-36">
+    <main class="">
         <!-- hero section -->
-        <section class="hidden">
+        <section class="mx-3 lg:mx-36 ">
             <div class="bg-[url('images/banner.png')] bg-cover bg-no-repeat rounded-lg h-fit flex justify-center">
                 <div class="flex flex-col items-center text-center w-2/3">
                     <h1 class="text-6xl font-extrabold mt-16 mb-4 text-white">End-to-End Travel with
@@ -93,7 +93,7 @@
 
             </div>
             <!-- stat templete -->
-            <div class="flex justify-center lg:mt-[-60px] ">
+            <div class="flex justify-center lg:mt-[-50px] ">
                 <div class="stats shadow border-themeGreen border-2">
 
 
@@ -129,7 +129,7 @@
             </div>
         </section>
         <!-- cupon section -->
-        <section class="hidden">
+        <section class="mx-3 lg:mx-36">
             <div class="">
                 <div class="">
                     <h2 class="text-4xl font-bold text-center">Best offers for you</h2>
@@ -161,17 +161,17 @@
             </div>
         </section>
         <!--  booking section -->
-        <section class="mt-28">
-            <div class=" border-t-2 rounded-2xl border-green-700 bg-GrayBg mt-10">
+        <section class="mt-28 bg-gray-200">
+            <div class=" border-t-2 rounded-2xl border-green-700 bg-GrayBg mt-10 mx-3 lg:mx-36">
                 <!-- booking static -->
-                
-                <div class="bg-white"> <!-- bg-GrayBg -->
-                    <h2 class="text-4xl font-bold text-center mb-6">P.H Paribahan</h2>
-                    <p class="text-center w-2/3 mx-auto">Seamless Journeys Await: Explore Convenience and Affordability
-                        with
-                        Ticket BD - Your Gateway to Effortless Online Bus Ticket Booking!</p>
 
-                    <div class=" grid grid-rows-4 grid-cols-8 mt-10">
+                <div class="bg-white"> <!-- bg-GrayBg -->
+                    <div class="bg-GrayBg">
+                        <h2 class="text-4xl font-bold text-center mb-6 mt-28">P.H Paribahan</h2>
+                        <p class="text-center w-2/3 mx-auto">Seamless Journeys Await: Explore Convenience and Affordability with Ticket BD - Your Gateway to Effortless Online Bus Ticket Booking!</p>
+                    </div>
+
+                    <div class=" grid grid-cols-8 mt-10">
                         <div class=" col-span-6 p-8 ">
                             <div class="flex justify-between ">
                                 <div class="flex gap-3 w-2/3">
@@ -223,12 +223,136 @@
                     </div>
                 </div>
                 <!-- booking dynamic -->
-                <div>
-                    <div>
-                        <!-- ticket er uper er onso -->
+                <div class="bg-white mt-6 grid grid-cols-12">
+                    <!-- ticket onso -->
+                    <div class="p-8 col-span-7">
+                        <h3 class="font-bold">Select Your Seat</h3>
+                        <hr class="border-2 border-dashed my-4">
+                        <div class="flex justify-end">
+                            <button class="btn"> <img src="images/wheel.svg" alt=""></button>
+                        </div>
+                        <div class="flex justify-between ">
+                            <div class=" flex gap-x-3">
+                                <img src="images/seat-gray.png" alt="">
+                                <p class="text-gray-500 font-semibold">Available</p>
+                            </div>
+                            <div class=" flex gap-x-3">
+                                <img src="images/seat-green-filled.png" alt="">
+                                <p class="text-gray-500 font-semibold">Selected</p>
+                            </div>
+                        </div>
+                        <!-- ticket serial -->
+                        <div class="seat-no grid grid-cols-5 gap-6 font-inter">
+                            <button>A</button>
+                            <button id="A1" onclick="mouseClick()" class="btn btn-ghost">A1</button>
+                            <button id="A2" class="btn btn-ghost">A2</button>
+                            <button id="A3" class="btn btn-ghost">A3</button>
+                            <button id="A4" class="btn btn-ghost">A4</button>
+                            <button>B</button>
+                            <button id="B1" class="btn btn-ghost">B1</button>
+                            <button id="B2" class="btn btn-ghost">B2</button>
+                            <button id="B3" class="btn btn-ghost">B3</button>
+                            <button id="B4" class="btn btn-ghost">B4</button>
+                            <button>C</button>
+                            <button id="C1" class="btn btn-ghost">C1</button>
+                            <button id="C2" class="btn btn-ghost">C2</button>
+                            <button id="C3" class="btn btn-ghost">C3</button>
+                            <button id="C4" class="btn btn-ghost">C4</button>
+                            <button>D</button>
+                            <button id="D1" class="btn btn-ghost">D1</button>
+                            <button id="D2" class="btn btn-ghost">D2</button>
+                            <button id="D3" class="btn btn-ghost">D3</button>
+                            <button id="D4" class="btn btn-ghost">D4</button>
+                            <button>E</button>
+                            <button id="E1" class="btn btn-ghost">E1</button>
+                            <button id="E2" class="btn btn-ghost">E2</button>
+                            <button id="E3" class="btn btn-ghost">E3</button>
+                            <button id="E4" class="btn btn-ghost">E4</button>
+                            <button>F</button>
+                            <button id="F1" class="btn btn-ghost">F1</button>
+                            <button id="F2" class="btn btn-ghost">F2</button>
+                            <button id="F3" class="btn btn-ghost">F3</button>
+                            <button id="F4" class="btn btn-ghost">F4</button>
+                            <button>G</button>
+                            <button id="G1" class="btn btn-ghost">G1</button>
+                            <button id="G2" class="btn btn-ghost">G2</button>
+                            <button id="G3" class="btn btn-ghost">G3</button>
+                            <button id="G4" class="btn btn-ghost">G4</button>
+                            <button>H</button>
+                            <button id="H1" class="btn btn-ghost">H1</button>
+                            <button id="H2" class="btn btn-ghost">H2</button>
+                            <button id="H3" class="btn btn-ghost">H3</button>
+                            <button id="H4" class="btn btn-ghost">H4</button>
+                            <button>I</button>
+                            <button id="I1" class="btn btn-ghost">I1</button>
+                            <button id="I2" class="btn btn-ghost">I2</button>
+                            <button id="I3" class="btn btn-ghost">I3</button>
+                            <button id="I4" class="btn btn-ghost">I4</button>
+                            <button>J</button>
+                            <button id="J1" class="btn btn-ghost">J1</button>
+                            <button id="J2" class="btn btn-ghost">J2</button>
+                            <button id="J3" class="btn btn-ghost">J3</button>
+                            <button id="J4" class="btn btn-ghost">J4</button>
+
+
+                        </div>
+
                     </div>
-                    <div>
-                        <!-- ticket onso -->
+                    <!-- form onso -->
+                    <div class="col-span-5 m-8">
+                        <h2 class=" font-bold mb-4">Select Your Ticket</h2>
+                        <div class="bg-GrayBg p-8 rounded-lg font-inter">
+                            <div class="grid grid-cols-3 gap-x-10 gap-y-2">
+                                <h3 class="font-bold">Seat <span class="bg-themeGreen text-white font-bold rounded-2xl">1</span></h3>
+                                <h3 class="font-bold">Class</h3>
+                                <h3 class="font-bold">Price</h3>
+                                <hr class="border-2 border-dashed col-span-3 my-4">
+                                <p>C2</p>
+                                <p>Economy</p>
+                                <p>550</p>
+                                <p>C2</p>
+                                <p>Economy</p>
+                                <p>550</p>
+                                <hr class="border-4 border-solid col-span-3 my-4">
+                            </div>
+                            <div class="flex justify-between font-bold mb-2 ">
+                                <p>Total Price</p>
+                                <p>BDT <span>550</span></p>
+                            </div>
+                            <div class="flex gap-x-3">
+                                <input type="text" placeholder="Type here"
+                                    class="input input-bordered w-full max-w-xs" />
+                                <button class="btn bg-themeGreen text-lg font-bold text-white rounded-xl">Next</button>
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <label class="form-control w-full  mb-4">
+                                <div class="label">
+                                    <span class="label-text font-bold">What is your name?</span>
+                                </div>
+                                <input type="text" placeholder="Enter Your Name" class="input input-bordered w-full " />
+                            </label>
+
+                            <label class="form-control w-full mb-4 ">
+                                <div class="label">
+                                    <span class="label-text font-bold">What is your name?</span>
+                                </div>
+                                <input type="text" placeholder="Enter Your Name" class="input input-bordered w-full " />
+                            </label>
+
+                            <label class="form-control w-full mb-4 ">
+                                <div class="label">
+                                    <span class="label-text font-bold">What is your name?</span>
+                                </div>
+                                <input type="text" placeholder="Enter Your Name" class="input input-bordered w-full " />
+                            </label>
+                            <button
+                                class="btn bg-themeGreen text-lg font-bold text-white rounded-xl w-full">Next</button>
+                            <div class="flex justify-between text-gray-500 font-bold mt-4">
+                                <span class="underline">Terms and Conditions</span>
+                                <span class="underline">Cancellation Policy</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -291,6 +415,7 @@
         </div>
     </footer>
     <script src="scripts/script.js"></script>
+    <script src="utility.js"></script>
 </body>
 
 </html>

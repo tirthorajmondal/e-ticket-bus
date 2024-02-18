@@ -9,19 +9,7 @@
     font-family: "Inter", sans-serif;
 
 }
-
-.color-coupon-red{
-    color: #F78C9C;
-}
-
-.color-coupon-yellow{
-    color: #FFBF0F;
-}
-
-.color-theme-green{
-    color: #1DD100;
-}
-
-.color-gray-bg{
-    color: #F7F8F8;
+.seat-no>button{
+    /* background: #F7F8F8; */
+    
 }

@@ -1,3 +1,3 @@
-function abc (){
-    console.log('printed');
+function mouseClick (){
+    console.log('clicked');
 }
