@@ -74,7 +74,7 @@
             </div>
         </div>
     </header>
-    <hr class="border-dashed border-8 ">
+    
     <main class="">
         <!-- hero section -->
         <section class="mx-3 lg:mx-36 ">
@@ -244,10 +244,10 @@
                         <!-- ticket serial -->
                         <div class="seat-no grid grid-cols-5 gap-6 font-inter">
                             <button>A</button>
-                            <button id="A1" onclick="mouseClick()" class="btn btn-ghost">A1</button>
-                            <button id="A2" class="btn btn-ghost">A2</button>
-                            <button id="A3" class="btn btn-ghost">A3</button>
-                            <button id="A4" class="btn btn-ghost">A4</button>
+                            <button id="A1" onclick="mouseClick()" class="tickets btn btn-ghost">A1</button>
+                            <button id="A2" onclick="purchase()" class="tickets btn btn-ghost">A2</button>
+                            <button id="A3" class="tickets btn btn-ghost">A3</button>
+                            <button id="A4" class="tickets btn btn-ghost">A4</button>
                             <button>B</button>
                             <button id="B1" class="btn btn-ghost">B1</button>
                             <button id="B2" class="btn btn-ghost">B2</button>
@@ -378,7 +378,7 @@
             </div>
         </section>
     </main>
-    <footer class="bg-[#030712] hidden">
+    <footer class="bg-[#030712]">
         <div class="lg:mx-36 text-white py-20">
             <div class="flex justify-between">
                 <div>
