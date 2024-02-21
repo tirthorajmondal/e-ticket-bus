@@ -78,7 +78,7 @@
     <main class="">
         <!-- hero section -->
         <section class="mx-3 lg:mx-36 ">
-            <div class="bg-[url('images/banner.png')] bg-cover bg-no-repeat rounded-lg h-fit flex justify-center">
+            <div class="bg-[url('images/banner.png')] bg-cover bg-no-repeat rounded-lg  flex justify-center">
                 <div class="flex flex-col items-center text-center w-2/3">
                     <h1 class="text-6xl font-extrabold mt-16 mb-4 text-white">End-to-End Travel with
                         <span class="block text-center text-themeGreen"> P Paribahan</span>
@@ -129,7 +129,7 @@
             </div>
         </section>
         <!-- cupon section -->
-        <section class="mx-3 lg:mx-36">
+        <section class="mx-3 lg:mx-36 mb-28">
             <div class="">
                 <div class="">
                     <h2 class="text-4xl font-bold text-center">Best offers for you</h2>
@@ -147,12 +147,12 @@
                         </div>
                         <div class="bg-themeRed flex">
                             <div class="m-12">
-                                <h3 class="text-3xl font-bold">15% OFF</h3>
+                                <h3 class="text-3xl font-bold">20% OFF</h3>
                                 <h4 class="text-xl font-semibold ">on your next purchase</h4>
                                 <p>use by January 2024</p>
                             </div>
                             <div class="m-12">
-                                <h4 class="">NEW15</h4>
+                                <h4 class="">COUPLE 20</h4>
                                 <p>Coupon Code</p>
                             </div>
                         </div>
@@ -161,13 +161,13 @@
             </div>
         </section>
         <!--  booking section -->
-        <section class="mt-28 bg-gray-200">
-            <div class=" border-t-2 rounded-2xl border-green-700 bg-GrayBg mt-10 mx-3 lg:mx-36">
+        <section class=" py-16 bg-gray-200  border-t-2 rounded-3xl border-themeGreen ">
+            <div class="  bg-GrayBg mt-10 mx-3 lg:mx-36">
                 <!-- booking static -->
 
-                <div class="bg-white"> <!-- bg-GrayBg -->
-                    <div class="bg-GrayBg">
-                        <h2 class="text-4xl font-bold text-center mb-6 mt-28">P.H Paribahan</h2>
+                <div class="bg-white rounded-xl"> <!-- bg-GrayBg -->
+                    <div class="bg-GrayBg pt-16">
+                        <h2 class="text-4xl font-bold text-center mb-6">P.H Paribahan</h2>
                         <p class="text-center w-2/3 mx-auto">Seamless Journeys Await: Explore Convenience and Affordability with Ticket BD - Your Gateway to Effortless Online Bus Ticket Booking!</p>
                     </div>
 
@@ -183,7 +183,7 @@
                                 </div>
                                 <div class="flex gap-x-4 p-4 rounded-xl bg-[#1DD10026] ">
                                     <img src="images/seat-green.png" alt="">
-                                    <p class="text-themeGreen font-bold text-xl font-inter"><span>40 </span>Seats left
+                                    <p class="text-themeGreen font-bold text-xl font-inter"><span id="seat-left">40 </span>Seats left
                                     </p>
                                 </div>
 
@@ -244,15 +244,15 @@
                         <!-- ticket serial -->
                         <div class="seat-no grid grid-cols-5 gap-6 font-inter">
                             <button>A</button>
-                            <button id="A1" onclick="mouseClick()" class="tickets btn btn-ghost">A1</button>
-                            <button id="A2" onclick="purchase()" class="tickets btn btn-ghost">A2</button>
-                            <button id="A3" class="tickets btn btn-ghost">A3</button>
+                            <button id="A1" onclick="seatCount()" class="tickets btn btn-ghost">A1</button>
+                            <button id="A2" onclick="" class="tickets btn btn-ghost">A2</button>
+                            <button onclick="testing()" id="A3" class="tickets btn btn-ghost">A3</button>
                             <button id="A4" class="tickets btn btn-ghost">A4</button>
                             <button>B</button>
-                            <button id="B1" class="btn btn-ghost">B1</button>
-                            <button id="B2" class="btn btn-ghost">B2</button>
-                            <button id="B3" class="btn btn-ghost">B3</button>
-                            <button id="B4" class="btn btn-ghost">B4</button>
+                            <button onclick="seatStyle()" id="B1" class="btn btn-ghost">B1</button>
+                            <button onclick="seatStyle()" id="B2" class="btn btn-ghost">B2</button>
+                            <button onclick="seatStyle()" id="B3" class="btn btn-ghost">B3</button>
+                            <button onclick="seatStyle()" id="B4" class="btn btn-ghost">B4</button>
                             <button>C</button>
                             <button id="C1" class="btn btn-ghost">C1</button>
                             <button id="C2" class="btn btn-ghost">C2</button>
@@ -303,7 +303,7 @@
                         <h2 class=" font-bold mb-4">Select Your Ticket</h2>
                         <div class="bg-GrayBg p-8 rounded-lg font-inter">
                             <div class="grid grid-cols-3 gap-x-10 gap-y-2">
-                                <h3 class="font-bold">Seat <span class="bg-themeGreen text-white font-bold rounded-2xl">1</span></h3>
+                                <h3 class="font-bold">Seat <span id="seat-no" class="bg-themeGreen text-white font-bold rounded-2xl">1</span></h3>
                                 <h3 class="font-bold">Class</h3>
                                 <h3 class="font-bold">Price</h3>
                                 <hr class="border-2 border-dashed col-span-3 my-4">
@@ -388,9 +388,9 @@
                     </p>
                 </div>
                 <!-- playstore button section -->
-                <div class="">
+                <div class=" ">
                     <p class="text-end mb-5">Download our app</p>
-                    <div class="flex border-2 gap-4 py-2 px-3">
+                    <div class="flex border-2 roundlg gap-4 py-2 px-3">
                         <img src="images/playstore.png" alt="">
                         <div class="">
                             <p>Get it on</p>
@@ -415,7 +415,7 @@
         </div>
     </footer>
     <script src="scripts/script.js"></script>
-    <script src="utility.js"></script>
+    <script src="scripts/utility.js"></script>
 </body>
 
 </html>
