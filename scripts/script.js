@@ -2,13 +2,8 @@ const allSeats = document.getElementsByClassName('seat-btn');
 // console.log(allSeats);
 
 for (const seat of allSeats) {
+
     seat.addEventListener('click', function (event) {
-        event.target.setAttribute('disabled', false)
-        event.target.style.backgroundColor = 'green';
-        event.target.style.color = 'white';
-
-
-
         // update selected seat count 
         const selectedSeatCount = getConvertedValue('selected-seat-count');
 
@@ -16,6 +11,13 @@ for (const seat of allSeats) {
             alert('You can not buy more than 4 tickets');
             return;
         }
+
+        // change text & bg color
+        event.target.setAttribute('disabled', false)
+        event.target.style.color = 'white';
+        event.target.style.backgroundColor = '#1DD100';
+
+
         document.getElementById('selected-seat-count').innerText = selectedSeatCount + 1;
 
         // update seat left
@@ -63,18 +65,29 @@ function setTotalPrice() {
 function setGrandTotal(status) {
     const totalPrice = getConvertedValue('total-price');
     const grandTotal = getConvertedValue('grand-total');
+    // normal grand total
+    document.getElementById('grand-total').innerText = totalPrice;
 
     if (status) {
         const couponValue = document.getElementById('coupon-input').value;
-        console.log(couponValue);
-        const newCoupon = NEW15;
-        const coupleCoupon = COUPLE20;
-        if (couponValue == newCoupon) {
-            console.log("matched");
-        }
-    }
-    else {
+        // console.log(couponValue);
 
-        document.getElementById('grand-total').innerText = totalPrice;
+        const coupon1 = 'NEW15';
+        const coupon2 = 'COUPLE20';
+        if (couponValue == coupon1) {
+            const grandTotalPrice = totalPrice - (totalPrice * 0.15);
+            document.getElementById('grand-total').innerText = grandTotalPrice;
+
+        }
+        else if (couponValue === coupon2) {
+            const grandTotalPrice = totalPrice - (totalPrice * 0.20);
+            document.getElementById('grand-total').innerText = grandTotalPrice;
+        }
+        else {
+            document.getElementById('grand-total').innerText = totalPrice;
+            alert('Please Enter a valid coupon code');
+        }
+        document.getElementById('coupon-input').value = '';
     }
 }
+
