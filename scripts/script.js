@@ -67,6 +67,7 @@ function setGrandTotal(status) {
     const grandTotal = getConvertedValue('grand-total');
     // normal grand total
     document.getElementById('grand-total').innerText = totalPrice;
+    
 
     if (status) {
         const couponValue = document.getElementById('coupon-input').value;
@@ -88,6 +89,7 @@ function setGrandTotal(status) {
             alert('Please Enter a valid coupon code');
         }
         document.getElementById('coupon-input').value = '';
+        
     }
 }
 
