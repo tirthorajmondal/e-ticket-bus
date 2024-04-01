@@ -67,7 +67,7 @@ function setGrandTotal(status) {
     const grandTotal = getConvertedValue('grand-total');
     // normal grand total
     document.getElementById('grand-total').innerText = totalPrice;
-    
+
 
     if (status) {
         const couponValue = document.getElementById('coupon-input').value;
@@ -89,7 +89,46 @@ function setGrandTotal(status) {
             alert('Please Enter a valid coupon code');
         }
         document.getElementById('coupon-input').value = '';
-        
+
     }
 }
 
+// conditional submit
+function success() {
+    const nameValue = document.getElementById("name").value;
+    const phoneValue = document.getElementById("phone").value;
+    
+    if (nameValue === "" || phoneValue === "") {
+
+        alert("Please check the form again");
+    } else {
+        showHide();
+    }
+    document.getElementById("name").value = "";
+    document.getElementById("phone").value = "";
+}
+
+function showHide() {
+    hideElementById('hero');
+    hideElementById('coupon');
+    hideElementById('booking');
+    showElementById('success');
+
+}
+function continuePurchase() {
+    showElementById('hero');
+    showElementById('coupon');
+    showElementById('booking');
+    hideElementById('success');
+
+}
+
+
+function hideElementById(hideId) {
+    const elementId = document.getElementById(hideId);
+    elementId.classList.add('hidden');
+}
+
+function showElementById(showId) {
+    document.getElementById(showId).classList.remove('hidden');
+}

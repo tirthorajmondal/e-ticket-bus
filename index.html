@@ -77,7 +77,7 @@
 
     <main class="">
         <!-- hero section -->
-        <section class="mx-3 lg:mx-36 rounded-lg ">
+        <section id="hero" class="mx-3 lg:mx-36 rounded-lg ">
             <div class="bg-[url('images/banner.png')] bg-center lg:bg-cover bg-no-repeat  rounded-lg  flex justify-center">
                 <div class="flex flex-col items-center text-center w-5/6 lg:w-2/3">
                     <h1 class="text-4xl lg:text-6xl font-extrabold mt-16 mb-4 text-white">End-to-End Travel with
@@ -123,7 +123,7 @@
             </div>
         </section>
         <!-- cupon section -->
-        <section class="mt-10 mx-3 lg:mx-36 mb-28">
+        <section id="coupon" class="mt-10 mx-3 lg:mx-36 mb-28">
             
                 <div class="">
                     <h2 class="text-4xl font-bold text-center mb-10">Best offers for you</h2>
@@ -155,7 +155,7 @@
             
         </section>
         <!--  booking section -->
-        <section class=" py-16 bg-GrayBg   border-t-2 rounded-t-[96px] border-themeGreen">
+        <section id="booking" class=" py-16 bg-GrayBg   border-t-2 rounded-t-[96px] border-themeGreen">
             <div class="  bg-GrayBg mt-10 mx-3 lg:mx-36">
                 <!-- booking static -->
 
@@ -221,12 +221,9 @@
                 <!-- booking dynamic -->
                 <div class="bg-white mt-6 grid lg:grid-cols-12 rounded-xl">
                     <!-- ticket onso -->
-                    <div class="p-8  lg:col-span-7">
+                    <div class="p-8  lg:col-span-7 border-r-2 border-dashed">
                         <h3 class="font-bold">Select Your Seat</h3>
                         <hr class="border-2 border-dashed my-4">
-                        <div class="flex justify-end">
-                            <button class="btn"> <img src="images/wheel.svg" alt=""></button>
-                        </div>
                         <div class="flex justify-between ">
                             <div class=" flex gap-x-3">
                                 <img src="images/seat-gray.png" alt="">
@@ -236,6 +233,10 @@
                                 <img src="images/seat-green-filled.png" alt="">
                                 <p class="text-gray-500 font-semibold">Selected</p>
                             </div>
+                        </div>
+                        <hr class="border-2 border-dashed my-4">
+                        <div class="flex justify-end">
+                            <button class="btn"> <img src="images/wheel.svg" alt=""></button>
                         </div>
                         <!-- ticket serial -->
                         <div class="seat-no grid grid-cols-5 gap-6 font-inter">
@@ -328,23 +329,23 @@
                                 <div class="label">
                                     <span class="label-text font-bold">Passenger Name<span class="text-red-600 font-semibold text-2xl">*</span></span>
                                 </div>
-                                <input type="text" placeholder="Enter Your Name" class="input input-bordered w-full " />
+                                <input id="name" type="text" placeholder="Enter Your Name" class="input input-bordered w-full " required/>
                             </label>
 
                             <label class="form-control w-full mb-4 ">
                                 <div class="label">
                                     <span class="label-text font-bold">Phone Number<span class="text-red-600 font-semibold text-2xl">*</span></span>
                                 </div>
-                                <input type="text" placeholder="Enter Your Name" class="input input-bordered w-full " />
+                                <input id="phone" type="number" placeholder="Enter Your Phone" class="input input-bordered w-full " required/>
                             </label>
 
                             <label class="form-control w-full mb-4 ">
                                 <div class="label">
-                                    <span class="label-text font-bold">What is your name?</span>
+                                    <span class="label-text font-bold">Email</span>
                                 </div>
-                                <input type="text" placeholder="Enter Your Name" class="input input-bordered w-full " />
+                                <input type="text" placeholder="Enter Your Email" class="input input-bordered w-full " />
                             </label>
-                            <button
+                            <button onclick="success()" 
                                 class="btn bg-themeGreen text-lg font-bold text-white rounded-xl w-full">Next</button>
                             <div class="flex justify-between text-gray-500 font-bold mt-4">
                                 <span class="underline"><a href="#2">Terms and Conditions</a></span>
@@ -359,16 +360,18 @@
 
         <!-- success part -->
 
-        <section class="hidden">
+        <section id="success" class="hidden mb-16">
             <div class="w-3/4 mx-auto bg-[#F2F1F1] py-10 rounded-xl">
-                <div class="flex flex-col items-center">
+                <div class="flex flex-col items-center ">
                     <img src="images/success.png " class="w-12" alt="">
                     <h2 class="text-themeGreen text-2xl font-bold my-10">Success</h2>
                     <h3 class="text-xl font-medium">Thank you for Booking Our Bus Seats.</h3>
-                    <h3 class="text-xl font-medium">We are working hard to find the best service and deals for you.</h3>
+                    <!-- <div class="flex items-center "> -->
+                        <h3 class="text-xl font-medium w-auto my-2 mx-14">We are working hard to find the best service and deals for you.</h3>
+                    <!-- </div> -->
                     <p class="mb-5">Shortly you will find a confirmation in your email.</p>
                     <div class="w-1/2">
-                        <button
+                        <button onclick="continuePurchase()"
                             class="btn bg-[#27AE60] text-xl font-bold text-white rounded-3xl w-full">Continue</button>
                     </div>
                 </div>
