@@ -124,6 +124,7 @@ function showHide() {
     hideElementById('hero');
     hideElementById('coupon');
     hideElementById('booking');
+    hideElementById('footer');
     showElementById('success');
 
 }
