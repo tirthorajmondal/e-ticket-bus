@@ -1,5 +1,4 @@
 const allSeats = document.getElementsByClassName('seat-btn');
-// console.log(allSeats);
 
 for (const seat of allSeats) {
 
@@ -8,6 +7,7 @@ for (const seat of allSeats) {
         const selectedSeatCount = getConvertedValue('selected-seat-count');
 
         if (selectedSeatCount + 1 > 4) {
+
             alert('You can not buy more than 4 tickets');
             return;
         }
@@ -44,8 +44,15 @@ for (const seat of allSeats) {
 
         setTotalPrice();
         setGrandTotal();
+
+        // next button enabled
+        document.getElementById('nextBtn').disabled = false;
+
     })
 }
+// next button disabled 
+document.getElementById('nextBtn').disabled = true;
+
 
 // get converted number value by id
 function getConvertedValue(id) {
@@ -78,11 +85,16 @@ function setGrandTotal(status) {
         if (couponValue == coupon1) {
             const grandTotalPrice = totalPrice - (totalPrice * 0.15);
             document.getElementById('grand-total').innerText = grandTotalPrice;
+            document.getElementById('applyBtn').disabled = true;
+            document.getElementById('applyBtn').innerText = 'Applied';
+
 
         }
         else if (couponValue === coupon2) {
             const grandTotalPrice = totalPrice - (totalPrice * 0.20);
             document.getElementById('grand-total').innerText = grandTotalPrice;
+            document.getElementById('applyBtn').disabled = true;
+            document.getElementById('applyBtn').innerText = 'Applied';
         }
         else {
             document.getElementById('grand-total').innerText = totalPrice;
@@ -97,7 +109,7 @@ function setGrandTotal(status) {
 function success() {
     const nameValue = document.getElementById("name").value;
     const phoneValue = document.getElementById("phone").value;
-    
+
     if (nameValue === "" || phoneValue === "") {
 
         alert("Please check the form again");

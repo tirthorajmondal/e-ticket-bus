@@ -130,23 +130,30 @@
                     <div class="flex flex-col lg:flex-row gap-y-5 lg:gap-y-0 justify-between">
                         <div class="flex bg-themeYellow rounded-lg">
                             <div class="my-12 mx-10">
-                                <h3 class="text-4xl font-black">15% OFF</h3>
+                                <h3 class="text-3xl font-black">15% OFF</h3>
                                 <h4 class="text-xl font-semibold ">on your next purchase</h4>
                                 <p>use by January 2024</p>
                             </div>
+                            <div class="mr-3">
+                                <img class="h-full" src="./images/cupon-devider.png" alt="">
+                            </div>
                             <div class="my-12 mr-10">
-                                <h4 class="font-extrabold text-3xl font-inter ">NEW15</h4>
+                                <h4 class="font-extrabold text-2xl font-inter ">NEW15</h4>
                                 <p class="text-xl">New users only</p>
                             </div>
                         </div>
                         <div class="bg-themeRed flex rounded-lg lg:ml-5">
                             <div class="my-12 mx-10">
-                                <h3 class="text-4xl font-black">20% OFF</h3>
+                                <h3 class="text-3xl font-black">20% OFF</h3>
                                 <h4 class="text-xl font-semibold ">on your next purchase</h4>
                                 <p>use by January 2024</p>
                             </div>
+                            <div class="mr-3">
+                                <img class="h-full" src="./images/cupon-devider.png" alt="">
+                            </div>
+
                             <div class="my-12 mr-10">
-                                <h4 class="font-extrabold text-3xl font-inter">COUPLE20</h4>
+                                <h4 class="font-extrabold text-2xl font-inter">COUPLE20</h4>
                                 <p class="text-xl">For couple only</p>
                             </div>
                         </div>
@@ -315,7 +322,7 @@
                                     class="input input-bordered w-full max-w-xs" />
 
 
-                                <button onclick="setGrandTotal('status')"
+                                <button onclick="setGrandTotal('status')" id="applyBtn"
                                     class="btn bg-themeGreen text-lg font-bold text-white rounded-xl">
                                     Apply</button>
                             </div>
@@ -345,8 +352,8 @@
                                 </div>
                                 <input type="text" placeholder="Enter Your Email" class="input input-bordered w-full " />
                             </label>
-                            <button onclick="success()" 
-                                class="btn bg-themeGreen text-lg font-bold text-white rounded-xl w-full">Next</button>
+                            <button onclick="success()" id="nextBtn"
+                                class=" btn bg-themeGreen text-lg font-bold text-white rounded-xl w-full">Next</button>
                             <div class="flex justify-between text-gray-500 font-bold mt-4">
                                 <span class="underline"><a href="#2">Terms and Conditions</a></span>
                                 <span class="underline"><a href="#2">Cancellation Policy</a></span>
@@ -416,7 +423,6 @@
         </div>
     </footer>
     <script src="scripts/script.js"></script>
-    <script src="scripts/utility.js"></script>
 </body>
 
 </html>
